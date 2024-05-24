@@ -1,2 +1,1 @@
-# *Fundamental limits of weak learnability in high-dimensional multi-index models*
- 
+# *Repetita Iuvant: Data Repetition Allows SGD to Learn High-Dimensional Multi-Index Functions*
