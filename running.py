@@ -12,7 +12,7 @@ from pathlib import Path
 ncpu = mp.cpu_count()
 parallel_procs = 1
 computation_database_path = 'computation-database/'
-basepath = 'hyperparameters/Test'
+basepath = 'hyperparameters/'
 
 
 ### ACTIVATION FUNCTIONS and TARGETS###
@@ -72,7 +72,7 @@ def run_path(
         force_run = False
     ):
     # Getting the file list
-    pathlist = Path(basepath).glob(f"{'**/' if recursive else ''}*.yaml")
+    pathlist = Path(path).glob(f"{'**/' if recursive else ''}*.yaml")
     if read_all:
         run_filespaths = [str(path) for path in pathlist]
         print('Files detetched: ', len(run_filespaths))

@@ -1,0 +1,33 @@
+algo_methods:
+- true_sam
+- gd
+batch_size_choices:
+- one
+choice_a: gaussian
+choice_gammas:
+- sam
+choice_init: zero
+choice_time_scaling: dlogd
+coefficient_time: 500
+ds:
+- 512
+- 1024
+- 2048
+k: 3
+noise: 0
+nseeds: 20 # I have simulation up to 40, but it is very hard to generate them
+predictor_interaction: false
+prefactors: 
+# - 0.01
+- 0.1
+ps:
+- 8
+# - 16
+student_activation_choices:
+- relu
+spherical: 0
+rho_prefactors: 
+- 0.1
+teacher_kind: specified
+target_choices:
+- z1z2z3

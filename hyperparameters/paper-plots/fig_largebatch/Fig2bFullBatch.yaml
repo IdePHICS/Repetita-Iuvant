@@ -1,0 +1,37 @@
+algo_methods:
+- true_sam
+- gd
+- no_resample
+batch_size_choices:
+- double
+choice_a: gaussian
+choice_gammas:
+- sam
+choice_init: zero
+choice_time_scaling: dlogd
+coefficient_time: 100
+ds:
+# - 512s
+- 1024
+- 2048
+k: 2
+noise: 0
+nseeds: 10
+predictor_interaction: false
+prefactors: 
+- 0.01
+ps:
+- 8
+student_activation_choices:
+- relu
+spherical: 0
+rho_prefactors: 
+- 0.1
+teacher_kind: specified
+target_choices:
+- fig2bnotanh # H1(z1) + H3(z2)
+M_rotation: 
+- - 1
+  - 0
+- - 0
+  - 1

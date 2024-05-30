@@ -13,7 +13,7 @@ def main(argc, argv):
     last_flag = "Fig2b"
     filepath = f'hyperparameters/{index_flag}/{algo_flag}/{batch_flag}/{new_flag}/{last_flag}.yaml' # This is the date and hour of the hyperparameters file
 
-    filepath = 'hyperparameters/definitive/fig_staircase/SQStairH4_long.yaml'
+    filepath = 'hyperparameters/'
     prefactor_index = 0
     rho_prefactor_index = 0
     p_index = 0
@@ -40,7 +40,7 @@ def main(argc, argv):
         debug = True,
         figname = None,
         figtype = 'png',
-        computation_database_path = 'computation-database-definitive/'
+        computation_database_path = 'computation-database/'
     )   
 
 paths_to_folders = {
@@ -180,8 +180,8 @@ def plot_from_hyperparams(
                             assert(time_scaling == data['choice_time_scaling'])
                             assert(T == data['T'])
 
-                        Ms.append(data['Ms'][:plotting_T:skip_factor,:,:])
-                        Qs.append(data['Qs'][:plotting_T:skip_factor,:,:])
+                        Ms.append(data['Ms'][:plotting_T+1:skip_factor,:,:])
+                        Qs.append(data['Qs'][:plotting_T+1:skip_factor,:,:])
                 if len(Ms) == 0:
                     warnings.warn(f'No files found for d = {d} -- algo = {algo_method}\nLast Tried: {filename}')
                     continue
@@ -296,7 +296,7 @@ def plot_from_hyperparams(
                 axes[r].legend()
     ### SAVE ###
     if save_flag:
-        default_fig_name = f'computation-database/figures/({flag})algos{algo_methods}_p{p}_ds{ds}_T{plotting_CT}_gamma{prefactor}_{choice_gamma}_teacher{target_choice}_student{student_activation_choice}_batch_size{batch_size_choice}_choice_a{choice_a}_init{choice_init}_k{k}_spherical{spherical_flag}_rhopref{rho_prefactor}_plot{what_to_plot}_{how_to_plot}'
+        default_fig_name = f'figures/({flag})algos{algo_methods}_p{p}_ds{ds}_T{plotting_CT}_gamma{prefactor}_{choice_gamma}_teacher{target_choice}_student{student_activation_choice}_batch_size{batch_size_choice}_choice_a{choice_a}_init{choice_init}_k{k}_spherical{spherical_flag}_rhopref{rho_prefactor}_plot{what_to_plot}_{how_to_plot}'
         if figname == None:
             figname = default_fig_name
         fig.savefig(

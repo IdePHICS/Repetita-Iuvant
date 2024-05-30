@@ -1,0 +1,31 @@
+algo_methods:
+- true_sam
+# - gd # SGD was learning also first direction for finite size effect. We decided to exclude beacuse of clarity.
+batch_size_choices:
+- one
+choice_a: gaussian
+choice_gammas:
+- sam
+choice_init: zero
+choice_time_scaling: dlogd
+coefficient_time: 5000
+ds:
+- 256
+- 512
+- 1024
+k: 3
+noise: 0
+nseeds: 20
+predictor_interaction: false
+prefactors: 
+- 0.01
+ps:
+- 4
+student_activation_choices:
+- relu
+spherical: 0
+rho_prefactors: 
+- 0.1
+teacher_kind: specified
+target_choices:
+- sqstairsH4_enchanted
