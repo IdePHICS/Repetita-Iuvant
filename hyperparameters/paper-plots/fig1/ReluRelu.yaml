@@ -1,0 +1,30 @@
+algo_methods:
+- true_sam
+- gd
+batch_size_choices:
+- one
+choice_a: ones
+choice_gammas:
+- sam
+choice_init: zero
+choice_time_scaling: multiple_pass_easy
+coefficient_time: 200
+ds:
+- 2048
+- 4096
+- 8192
+k: 1
+noise: 0
+nseeds: 40
+predictor_interaction: false
+prefactors: 
+- 0.01
+ps:
+- 1
+student_activation_choices:
+- relu
+teacher_activation_choices:
+- relu
+spherical: 0
+rho_prefactors: 
+- 0.1

@@ -1,0 +1,31 @@
+algo_methods:
+- true_sam
+- gd
+# - no_resample # I have it, but it is misleading because of the low value of alpha 
+batch_size_choices:
+- double
+choice_a: ones
+choice_gammas:
+- sam
+choice_init: zero
+choice_time_scaling: dlogd
+coefficient_time: 500
+ds:
+# - 1024
+- 2048
+- 4096
+k: 1
+noise: 0
+nseeds: 10
+predictor_interaction: false
+prefactors: 
+- 0.01
+ps:
+- 1
+student_activation_choices:
+- relu
+teacher_activation_choices:
+- H4
+spherical: 0
+rho_prefactors: 
+- 0.1

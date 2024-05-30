@@ -1,0 +1,35 @@
+algo_methods:
+- proxy_sam
+- gd
+batch_size_choices:
+- one
+choice_a: ones
+choice_gammas:
+- sam
+choice_init: zero
+choice_time_scaling: multiple_pass_easy
+coefficient_time: 50
+ds:
+# - 2048
+- 4096
+- 8192
+k: 1
+noise: 0
+nseeds: 10
+predictor_interaction: false
+prefactors: 
+- 0.1 
+ps:
+- 1
+student_activation_choices:
+- relu
+teacher_activation_choices:
+- H3
+spherical: 0
+rho_prefactors: 
+- 0.1
+# - 1
+
+
+# I parametri che funzionano sono rho_prefactor = 0.1, prefactor = 0.1
+# Voglio testare con prefactor 0.01, e con anche ReLu per uniformarmi

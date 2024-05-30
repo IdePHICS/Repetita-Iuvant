@@ -1,0 +1,32 @@
+algo_methods:
+- true_sam
+- gd
+batch_size_choices:
+- one
+choice_a: ones
+choice_gammas:
+- sam
+choice_init: zero
+choice_time_scaling: dlogd
+coefficient_time: 500
+ds:
+- 2048
+- 4096
+- 8192
+k: 1
+noise: 0
+nseeds: 40
+predictor_interaction: false
+prefactors: 
+- 0.01
+ps:
+- 1
+student_activation_choices:
+- relu
+teacher_activation_choices:
+- H4
+spherical: 0
+rho_prefactors: 
+- 0.1
+
+# I parametri che funzionano sono rho_prefactor = 0.1, prefactor = 0.01 
