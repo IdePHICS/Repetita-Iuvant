@@ -3,7 +3,7 @@
     <img src="figures/SQ-staircase.png" width=100%>
 </div>
 
-> Example of the new staircase structure emerging in algorithms that repeats data. $h^\star_{sign}=\mathrm{sign}(x_1x_2x_3)$ cannot be learned in $O(d)$ steps, while $h^\star_{stair}=h^\star_{sign}+\mathrm{He}_4(x_1)$ can because of the staircaise mechanism.
+> Example of the new staircase structure emerging in algorithms that repeats data. $h^\star_{sign}=\mathrm{sign}(x_1x_2x_3)$ cannot be learned in $O(d)$ steps, while $h^\star_{stair}=h^\star_{sign}+\mathrm{He}_4(x_1)$ it can because of the staircaise mechanism.
 
 
 ### Installation
