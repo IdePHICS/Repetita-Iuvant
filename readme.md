@@ -1,4 +1,4 @@
- # Online Learning and Information Exponents: The Importance of Batch size & Time/Complexity Tradeoffs
+ # Repetita iuvant: Data repetition allows sgd to learn high-dimensional multi-index functions
 <div width=auto>
     <img src="figures/SQ-staircase.png" width=100%>
 </div>
